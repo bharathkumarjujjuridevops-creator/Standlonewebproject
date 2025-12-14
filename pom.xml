@@ -54,22 +54,24 @@
 	</issueManagement>
 
 	-->
-	
-          <distributionManagement>
+	<distributionManagement>
+      <!-- RELEASE repository (NO -SNAPSHOT versions) -->
+    <repository>
+        <id>nexus</id>
+        <name>Nexus Release Repo</name>
+        <url>http://13.201.35.251:8081/repository/maven-releases/</url>
+    </repository>
 
-            <repository>
-              <id>nexus</id>
-              <name>KK FUNDA Releases Nexus Repository</name>
-              <url>http://13.201.35.251:8081/repository/maven-releases/</url>
-            </repository>
+    <!-- SNAPSHOT repository (ONLY -SNAPSHOT versions) -->
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>Nexus Snapshot Repo</name>
+        <url>http://13.201.35.251:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
 
-            <snapshotRepository>
-              <id>nexus</id>
-              <name>KK FUNDA Snapshot Nexus Repository </name>
-              <url>http://13.201.35.251:8081/repository/maven-releases/</url>
-            </snapshotRepository>
+	</distributionManagement>
 
-        </distributionManagement>
+         
 	<build>
 	  <plugins>
 	    <plugin>
